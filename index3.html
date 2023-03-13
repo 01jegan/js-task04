@@ -1,0 +1,28 @@
+ <!doctype html>
+<html>
+<head>
+    <title>js task</title>
+    <style>
+    h1{text-align: center;
+      color:lightblue;
+     }
+    body{
+        color: black;
+    } 
+     </style>
+</head>
+<body>
+    <h1>Write a code to replace the value 6 in the following object with 606</h1>
+    <script>
+        let obj = {
+  foo: { a: "hello", b: "world" },
+  bar: ["example", "mem", null, { xyz: 6 }, 88],
+  qux: [4, 8, 12]
+};
+document.write("old","<br>",JSON.stringify(obj),"<br>")
+Object.seal(obj);
+obj.bar[3].xyz = 606;
+document.write("new","<br>",JSON.stringify(obj));
+    </script>
+</body>
+</html>
